@@ -8,7 +8,7 @@ You will use git clone to be able to download the documents in the github
 Installation Requirements
 Git
 Git clone: git@github.com:smith961/code_challenge_2.git
-Live Link
+Live Link: prismatic-clafoutis-2018a1.netlify.app
 Technologies Used:
 HTML,
 CSS,
