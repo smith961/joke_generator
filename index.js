@@ -21,7 +21,8 @@ async function getjoke(){
         const response = await fetch(apiURL, options)
         const data = await response.json();
        
-        jokeEl.textContent = data[0].joke;
+        // jokeEl.textContent = data[0].joke;
+        jokeEl.textContent = "Life is like a pot of soup"
         btnEl.disabled = false;
         btnEl.textContent = "Tell me a joke";
         
