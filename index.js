@@ -1,14 +1,11 @@
 const btnEl = document.querySelector('#btn');
 const jokeEl = document.querySelector('#joke');
-
-const apiKey = "EJ+LyI1GkTXhZ1sGSq5hGQ==ss2SmigTLF6zyAom";
-const apiURL = "https://api.api-ninjas.com/v1/dadjokes?limit=1";
+const apiURL2 = "https://official-joke-api.appspot.com/random_joke";
 
 const options ={
     method: "GET",
-    headers: {
-        "X-Api-Key": apiKey,
-    },
+  
+   
 };
 
 async function getjoke(){
@@ -18,11 +15,12 @@ async function getjoke(){
         btnEl.disabled = true;
         btnEl.textContent = "Loading..."
         
-        const response = await fetch(apiURL, options)
+        const response = await fetch(apiURL2, options)
         const data = await response.json();
+        console.log(data);
        
-        // jokeEl.textContent = data[0].joke;
-        jokeEl.textContent = "Life is like a pot of soup"
+        jokeEl.textContent = `${data.setup}  ${data.punchline}`;
+        // jokeEl.textContent = "Life is like a pot of soup"
         btnEl.disabled = false;
         btnEl.textContent = "Tell me a joke";
         
